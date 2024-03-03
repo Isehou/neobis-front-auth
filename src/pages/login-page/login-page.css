@@ -79,7 +79,7 @@
   border: none;
   cursor: pointer;
 }
-.login-after__btn:hover {
+/* .login-after__btn:hover {
   background: var(--black-color);
   color: var(--white-color);
-}
+} */
