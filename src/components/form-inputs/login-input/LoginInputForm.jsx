@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { useFormik } from "formik";
+import * as yup from "yup";
+import { getPasswordEntry } from "../../../hooks/getPasswordEntry";
+import { validationSchema } from "../../../hooks/getYupSchema";
 import { FaEye } from "react-icons/fa"; // eye-icon active
 import { FaEyeSlash } from "react-icons/fa"; // eye-icon hidden
 
@@ -28,6 +31,7 @@ function LoginInputForm() {
       password: "",
       confirmPassword: "",
     },
+    validationSchema,
     onSubmit,
   });
 
@@ -53,7 +57,15 @@ function LoginInputForm() {
       </div>
 
       <div className="login__password-input">
-        <input type="password" placeholder="Создай пароль" />
+        <input
+          name="password"
+          id="password"
+          type={showPassword ? "text" : "password"}
+          value={formik.values.password}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          placeholder="Создай пароль"
+        />
         <button
           className="pass-button"
           type="button"
@@ -66,14 +78,18 @@ function LoginInputForm() {
           )}
         </button>
       </div>
+
       <ul className="input-forbidden">
-        <li>От 8 до 15 символов</li>
-        <li>Строчные и прописные буквы</li>
-        <li>Минимум 1 цифра</li>
-        <li>Минимум 1 спецсимвол (!, ", #, $...)</li>
+        {getPasswordEntry(formik).map((elem) => (
+          <li key={elem.key} style={{ color: elem.style }}>
+            {elem.text}
+          </li>
+        ))}
       </ul>
+
       <div className="login__password-input">
         <input
+          name="confirmPassword"
           id="confirmPassword"
           type={showConfirmPassword ? "text" : "password"}
           value={formik.values.confirmPassword}
