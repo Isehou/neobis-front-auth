@@ -102,11 +102,11 @@ function LoginInputForm() {
           type="button"
           onClick={handleShowConfirmPassword}
         >
-          {showConfirmPassword ? (
+          {/* {showConfirmPassword ? (
             <FaEyeSlash className="pass-button__icon" />
           ) : (
             <FaEye className="pass-button__icon" />
-          )}
+          )} */}
         </button>
       </div>
       <button
