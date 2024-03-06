@@ -1,10 +1,9 @@
 import React from "react";
 import MainImg from "../../assets/lorby-img.png";
-import { IoChevronBackCircle } from "react-icons/io5";
-import LoginInputForm from "../../components/form-inputs/login-input/LoginInputForm";
-
+import { Link } from "react-router-dom";
 import "../pages-setting.css";
 import "./login-page.css";
+import LoginInputForm from "../../components/form-inputs/login-inputs/LoginInputForm";
 
 function LoginPage() {
   return (
@@ -13,17 +12,10 @@ function LoginPage() {
         <img className="main-img" src={MainImg} alt="" />
       </div>
 
-      <div className="right-part__container login-page__container">
+      <div className="right-part__container">
         <div className="login-page__content">
-          <div className="back-btn-container">
-            <IoChevronBackCircle />
-            <button>Назад</button>
-          </div>
-          <div>
-            <h1 className="title">Создать аккаунт</h1>
-            <h1 className="title">Lorby</h1>
-          </div>
-          <LoginInputForm />
+          <h1 className="title">Вэлком бэк!</h1>
+          <LoginInputForm></LoginInputForm>
         </div>
       </div>
     </div>

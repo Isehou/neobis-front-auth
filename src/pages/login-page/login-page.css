@@ -1,32 +1,7 @@
-.back-btn-container {
-  position: absolute;
-  top: 30px;
-  left: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  width: 100px;
-  height: 30px;
-}
-.back-btn-container button {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-.title {
-  font-weight: 500;
-}
-.login-page__container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
 .login-page__content {
   border: 1px solid red;
   width: 350px;
-  height: 500px;
+  height: 350px;
 }
 .login-page__content input {
   margin-bottom: 10px;
@@ -40,46 +15,32 @@
   font-size: 11pt;
 }
 .login-page__content input:focus {
-  color: black;
+  color: var(--black-color);
   outline: none;
-  border: 1px solid black;
+  border: 1px solid var(--black-color);
 }
 .login__password-input {
   position: relative;
 }
-.pass-button {
-  margin-right: 5px;
-  width: 45px;
-  height: 45px;
-  position: absolute;
-  right: 0;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-.pass-button__icon:hover {
-  color: black;
-}
-.pass-button__icon {
-  width: 20px;
-  height: 20px;
-  color: #767676;
-}
-.input-forbidden {
-  font-size: 10pt;
-  padding-left: 30px;
-  text-align: left;
-  color: #767676;
-}
-.login-after__btn {
+.login__enter-btn {
   width: 100%;
   height: 40px;
-  background: #f8f8f8;
+  background: var(--black-color);
+  color: #fff;
   border-radius: 10px;
   border: none;
   cursor: pointer;
+  margin: 10px 0;
 }
-/* .login-after__btn:hover {
-  background: var(--black-color);
-  color: var(--white-color);
-} */
+.no-account-btn {
+  width: 100%;
+  height: 40px;
+  background: #fff;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  margin: 10px 0;
+}
+.no-account-btn:hover {
+  border: 1px solid var(--black-color);
+}

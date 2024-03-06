@@ -6,7 +6,7 @@ import { validationSchema } from "../../../hooks/getYupSchema";
 import { FaEye } from "react-icons/fa"; // eye-icon active
 import { FaEyeSlash } from "react-icons/fa"; // eye-icon hidden
 
-function LoginInputForm() {
+function RegistrationInputForm() {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
@@ -56,7 +56,7 @@ function LoginInputForm() {
         />
       </div>
 
-      <div className="login__password-input">
+      <div className="registration__password-input">
         <input
           name="password"
           id="password"
@@ -87,7 +87,7 @@ function LoginInputForm() {
         ))}
       </ul>
 
-      <div className="login__password-input">
+      <div className="registration__password-input">
         <input
           name="confirmPassword"
           id="confirmPassword"
@@ -102,15 +102,15 @@ function LoginInputForm() {
           type="button"
           onClick={handleShowConfirmPassword}
         >
-          {/* {showConfirmPassword ? (
+          {showConfirmPassword ? (
             <FaEyeSlash className="pass-button__icon" />
           ) : (
             <FaEye className="pass-button__icon" />
-          )} */}
+          )}
         </button>
       </div>
       <button
-        className="login-after__btn"
+        className="registration-after__btn"
         disabled={formik.isSubmitting}
         type="submit"
       >
@@ -120,4 +120,4 @@ function LoginInputForm() {
   );
 }
 
-export default LoginInputForm;
+export default RegistrationInputForm;

@@ -1,0 +1,94 @@
+.back-btn-container {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 100px;
+  height: 30px;
+}
+.back-btn-container button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  padding: 7px;
+}
+.back-btn-container button:hover {
+  border: 1px solid var(--black-color);
+  border-radius: 8px;
+}
+.title {
+  font-weight: 500;
+}
+.right-part__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.registration-page__content {
+  border: 1px solid red;
+  width: 350px;
+  height: 500px;
+}
+.registration-page__content input {
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100%;
+  height: 45px;
+  background: #f8f8f8;
+  color: #767676;
+  border: none;
+  border-radius: 10px;
+  font-size: 11pt;
+}
+.registration-page__content input:focus {
+  color: black;
+  outline: none;
+  border: 1px solid black;
+}
+.registration__password-input {
+  position: relative;
+}
+.pass-button {
+  margin-right: 5px;
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  right: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.pass-button__icon:hover {
+  color: black;
+}
+.pass-button__icon {
+  width: 20px;
+  height: 20px;
+  color: #767676;
+}
+.input-forbidden {
+  font-size: 10pt;
+  padding-left: 30px;
+  text-align: left;
+  color: #767676;
+}
+.registration-after__btn {
+  width: 100%;
+  height: 40px;
+  background: #f8f8f8;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+/* .login-after__btn:hover {
+  background: var(--black-color);
+  color: var(--white-color);
+} */
