@@ -36,7 +36,7 @@ function LoginInputForm() {
         value={formik.values.email}
         placeholder="Введите туда-сюда логин"
       />
-      <div class="login__password-input">
+      <div className="login__password-input">
         <input
           name="password"
           id="password"
@@ -60,7 +60,7 @@ function LoginInputForm() {
       </div>
 
       <button className="login__enter-btn">Войти</button>
-      <Link to="/registration">
+      <Link to="/sign-up">
         <button className="no-account-btn">У меня нет аккаунта</button>
       </Link>
     </div>

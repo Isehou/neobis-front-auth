@@ -1,5 +1,5 @@
 .login-page__content {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 350px;
   height: 350px;
 }
@@ -17,7 +17,7 @@
 .login-page__content input:focus {
   color: var(--black-color);
   outline: none;
-  border: 1px solid var(--black-color);
+  /* border: 1px solid var(--black-color); */
 }
 .login__password-input {
   position: relative;
@@ -40,7 +40,4 @@
   border: none;
   cursor: pointer;
   margin: 10px 0;
-}
-.no-account-btn:hover {
-  border: 1px solid var(--black-color);
 }

@@ -6,7 +6,7 @@ import { validationSchema } from "../../../hooks/getYupSchema";
 import { FaEye } from "react-icons/fa"; // eye-icon active
 import { FaEyeSlash } from "react-icons/fa"; // eye-icon hidden
 
-function RegistrationInputForm() {
+function SignUpInputForm() {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
@@ -34,6 +34,17 @@ function RegistrationInputForm() {
     validationSchema,
     onSubmit,
   });
+
+  const isFormValid = () => {
+    return (
+      formik.values.email &&
+      !formik.errors.email &&
+      !formik.errors.username &&
+      !formik.errors.password &&
+      !formik.errors.confirmPassword &&
+      formik.values.password === formik.values.confirmPassword
+    );
+  };
 
   return (
     <form onSubmit={formik.handleSubmit}>
@@ -111,7 +122,7 @@ function RegistrationInputForm() {
       </div>
       <button
         className="registration-after__btn"
-        disabled={formik.isSubmitting}
+        disabled={!isFormValid() || formik.isSubmitting}
         type="submit"
       >
         Далее
@@ -120,4 +131,4 @@ function RegistrationInputForm() {
   );
 }
 
-export default RegistrationInputForm;
+export default SignUpInputForm;

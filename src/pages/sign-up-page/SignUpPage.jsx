@@ -2,12 +2,12 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import MainImg from "../../assets/lorby-img.png";
 import { IoChevronBackCircle } from "react-icons/io5";
-import RegistrationInputForm from "../../components/form-inputs/registration-inputs/RegistrationInputForm";
+import SignUpInputForm from "../../components/form-inputs/sign-up-inputs/SignUpInputForm";
 
 import "../pages-setting.css";
-import "./registration-page.css";
+import "./sign-up-page.css";
 
-function RegistrationPage() {
+function SignUpPage() {
   const navigate = useNavigate();
   const goBack = () => {
     navigate(-1);
@@ -22,7 +22,7 @@ function RegistrationPage() {
         <div className="registration-page__content">
           <div className="back-btn-container">
             <button onClick={goBack}>
-              <IoChevronBackCircle />
+              <IoChevronBackCircle className="back-btn__icon" />
               Назад
             </button>
           </div>
@@ -30,11 +30,11 @@ function RegistrationPage() {
             <h1 className="title">Создать аккаунт</h1>
             <h1 className="title">Lorby</h1>
           </div>
-          <RegistrationInputForm />
+          <SignUpInputForm />
         </div>
       </div>
     </div>
   );
 }
 
-export default RegistrationPage;
+export default SignUpPage;
