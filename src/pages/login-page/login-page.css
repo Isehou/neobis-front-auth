@@ -17,7 +17,6 @@
 .login-page__content input:focus {
   color: var(--black-color);
   outline: none;
-  /* border: 1px solid var(--black-color); */
 }
 .login__password-input {
   position: relative;

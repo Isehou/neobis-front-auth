@@ -6,7 +6,9 @@ function WelcomeHomePage() {
     <div>
       <div>
         <h1>С возвращением!</h1>
-        <img className="main-img" src={MainImg} alt="" />
+        <div className="main-img__container">
+          <img className="main-img" src={MainImg} alt="" />
+        </div>
         <button>Выйти</button>
       </div>
     </div>

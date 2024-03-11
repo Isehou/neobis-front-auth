@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useFormik } from "formik";
 import * as yup from "yup";
-import { getPasswordEntry } from "../../../hooks/getPasswordEntry";
-import { validationSchema } from "../../../hooks/getYupSchema";
+import { getPasswordEntry } from "../../../utils/getPasswordEntry";
+import { validationSchema } from "../../../utils/validationSchema";
 import { FaEye } from "react-icons/fa"; // eye-icon active
 import { FaEyeSlash } from "react-icons/fa"; // eye-icon hidden
 

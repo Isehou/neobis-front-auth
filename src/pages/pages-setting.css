@@ -1,15 +1,14 @@
 .pages-wrapper {
   width: 1280px;
   height: 768px;
-  border: 1px solid black;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: red;
 }
 .right-part__container {
   width: 50%;
   height: 100%;
-  border: 1px solid red;
   text-align: center;
   position: relative;
 }

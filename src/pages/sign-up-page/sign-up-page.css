@@ -30,7 +30,6 @@
   align-items: center;
 }
 .registration-page__content {
-  /* border: 1px solid red; */
   width: 350px;
   height: 500px;
 }
@@ -48,7 +47,6 @@
 .registration-page__content input:focus {
   color: black;
   outline: none;
-  /* border: 1px solid black; */
 }
 .registration__password-input {
   position: relative;

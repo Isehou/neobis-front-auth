@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useFormik } from "formik";
 import * as yup from "yup";
-import { validationSchema } from "../../../hooks/getYupSchema";
+import { validationSchema } from "../../../utils/validationSchema";
 import { FaEye } from "react-icons/fa"; // eye-icon active
 import { FaEyeSlash } from "react-icons/fa"; // eye-icon hidden
 
