@@ -24,12 +24,13 @@
 .login__enter-btn {
   width: 100%;
   height: 40px;
-  background: var(--black-color);
   color: #fff;
   border-radius: 10px;
   border: none;
   cursor: pointer;
   margin: 10px 0;
+  background: var(--black-color);
+  color: var(--white-color);
 }
 .no-account-btn {
   width: 100%;

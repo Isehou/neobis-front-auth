@@ -5,6 +5,7 @@ import { getPasswordEntry } from "../../../utils/getPasswordEntry";
 import { validationSchema } from "../../../utils/validationSchema";
 import { FaEye } from "react-icons/fa"; // eye-icon active
 import { FaEyeSlash } from "react-icons/fa"; // eye-icon hidden
+import { Link } from "react-router-dom";
 
 function SignUpInputForm() {
   const [showPassword, setShowPassword] = useState(false);
@@ -130,13 +131,15 @@ function SignUpInputForm() {
           <div className="error-message">{formik.errors.confirmPassword}</div>
         ) : null}
       </div>
-      <button
-        className="registration-after__btn"
-        disabled={!isFormValid() || formik.isSubmitting}
-        type="submit"
-      >
-        Далее
-      </button>
+      <Link to="/welcome-home">
+        <button
+          className="registration-after__btn"
+          disabled={!isFormValid() || formik.isSubmitting}
+          type="submit"
+        >
+          Далее
+        </button>
+      </Link>
     </form>
   );
 }

@@ -27,6 +27,13 @@ function LoginInputForm() {
     validationSchema,
     onSubmit,
   });
+
+  const isFormValid = () => {
+    return (
+      formik.values.email && !formik.errors.email && !formik.errors.password
+    );
+  };
+
   return (
     <div>
       <input
@@ -64,8 +71,14 @@ function LoginInputForm() {
           <div className="error-message">{formik.errors.password}</div>
         ) : null}
       </div>
-
-      <button className="login__enter-btn">Войти</button>
+      <Link to="/welcome-back">
+        <button
+          className="login__enter-btn"
+          disabled={!isFormValid() || formik.isSubmitting}
+        >
+          Войти
+        </button>
+      </Link>
       <Link to="/sign-up">
         <button className="no-account-btn">У меня нет аккаунта</button>
       </Link>

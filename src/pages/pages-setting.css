@@ -22,3 +22,28 @@
   width: 420px;
   height: 580px;
 }
+
+/* welcome */
+
+.welcome-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  width: 500px;
+  /* background-color: red; */
+}
+.title-text {
+  margin-bottom: 30px;
+}
+
+.welcome__exit-btn {
+  margin-top: 30px;
+  width: 500px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: none;
+}

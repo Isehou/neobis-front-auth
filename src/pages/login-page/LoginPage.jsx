@@ -1,9 +1,9 @@
 import React from "react";
 import MainImg from "../../assets/lorby-img.png";
+import LoginInputForm from "../../components/form-inputs/login-inputs/LoginInputForm";
 
 import "../pages-setting.css";
 import "./login-page.css";
-import LoginInputForm from "../../components/form-inputs/login-inputs/LoginInputForm";
 
 function LoginPage() {
   return (
