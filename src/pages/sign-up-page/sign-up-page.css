@@ -71,7 +71,7 @@
 }
 .input-forbidden {
   font-size: 10pt;
-  padding-left: 30px;
+  padding-left: 15px;
   text-align: left;
   color: #767676;
 }
@@ -88,4 +88,11 @@
 .registration-after__btn:disabled {
   background: #f8f8f8;
   color: var(--black-color);
+}
+
+.error-message {
+  text-align: left;
+  color: red;
+  margin-bottom: 15px;
+  font-size: 10pt;
 }

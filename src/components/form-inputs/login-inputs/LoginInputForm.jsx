@@ -36,6 +36,9 @@ function LoginInputForm() {
         value={formik.values.email}
         placeholder="Введите туда-сюда логин"
       />
+      {formik.errors.email ? (
+        <div className="error-message">{formik.errors.email}</div>
+      ) : null}
       <div className="login__password-input">
         <input
           name="password"
@@ -57,6 +60,9 @@ function LoginInputForm() {
             <FaEye className="pass-button__icon" />
           )}
         </button>
+        {formik.errors.password ? (
+          <div className="error-message">{formik.errors.password}</div>
+        ) : null}
       </div>
 
       <button className="login__enter-btn">Войти</button>

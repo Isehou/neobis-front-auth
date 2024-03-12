@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useFormik } from "formik";
+import { useFormik, ErrorMessage } from "formik";
 import * as yup from "yup";
 import { getPasswordEntry } from "../../../utils/getPasswordEntry";
 import { validationSchema } from "../../../utils/validationSchema";
@@ -56,6 +56,9 @@ function SignUpInputForm() {
           value={formik.values.email}
           placeholder="Введите адрес почты"
         />
+        {formik.errors.email ? (
+          <div className="error-message">{formik.errors.email}</div>
+        ) : null}
       </div>
       <div>
         <input
@@ -65,6 +68,9 @@ function SignUpInputForm() {
           value={formik.values.username}
           placeholder="Придумай логин"
         />
+        {formik.errors.username ? (
+          <div className="error-message">{formik.errors.username}</div>
+        ) : null}
       </div>
 
       <div className="registration__password-input">
@@ -77,6 +83,7 @@ function SignUpInputForm() {
           onBlur={formik.handleBlur}
           placeholder="Создай пароль"
         />
+
         <button
           className="pass-button"
           type="button"
@@ -119,6 +126,9 @@ function SignUpInputForm() {
             <FaEye className="pass-button__icon" />
           )}
         </button>
+        {formik.errors.confirmPassword && formik.touched.confirmPassword ? (
+          <div className="error-message">{formik.errors.confirmPassword}</div>
+        ) : null}
       </div>
       <button
         className="registration-after__btn"
